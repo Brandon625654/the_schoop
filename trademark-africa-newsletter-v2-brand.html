@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Scoop — May 2026 | TradeMark Africa</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Catamaran:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:    #003b71;
+  --blue-80: #336192;
+  --blue-60: #668db3;
+  --blue-40: #99b8d4;
+  --blue-20: #ccdcea;
+  --blue-10: #e5edf4;
+  --red:     #ef4846;
+  --red-80:  #f26d6b;
+  --red-20:  #fcd4d4;
+  --green:   #70be5c;
+  --green-80:#8dcb7d;
+  --green-20:#d4efce;
+  --yellow:  #f0ea46;
+  --yellow-80:#f3ee6b;
+  --yellow-20:#fcfacc;
+  --grey:    #666666;
+  --grey-20: #e8e8e8;
+  --grey-10: #f5f5f5;
+  --white:   #ffffff;
+  --ink:     #111827;
+  --ink-mid: #374151;
+  --ink-soft:#6B7280;
+}
+
+body {
+  background: #f0f0f0;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.email-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+}
+
+/* ═══════════════════════════════ TOPBAR */
+.topbar {
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 28px;
+}
+.topbar-left {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.topbar-right {
+  display: flex;
+  gap: 18px;
+}
+.topbar-right a {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.topbar-right a:hover { color: var(--yellow); }
+
+/* ═══════════════════════════════ HEADER */
+.header {
+  background: var(--blue);
+  padding: 28px 28px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* decorative four-colour line bar — brand element */
+.brand-bar {
+  display: flex;
+  height: 4px;
+  width: 100%;
+}
+.brand-bar span { flex: 1; display: block; }
+.bb-blue   { background: var(--blue); }
+.bb-green  { background: var(--green); }
+.bb-red    { background: var(--red); }
+.bb-yellow { background: var(--yellow); }
+
+.header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 22px;
+}
+.header-brand {}
+.hb-org {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.hb-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* TMA 4-colour semicircle — pure CSS recreation of brand element */
+.tma-mark {
+  width: 44px; height: 44px;
+  position: relative;
+  flex-shrink: 0;
+}
+.tma-mark-circle {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  position: absolute;
+  top: 0; left: 0;
+}
+/* Four arcs: green, blue, red, yellow — brand colors, clockwise */
+.tma-arc-wrap {
+  width: 44px; height: 44px;
+  position: relative;
+}
+.tma-arc-wrap svg { width: 44px; height: 44px; }
+
+.hb-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.hb-trade {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.hb-tagline {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  line-height: 1;
+}
+
+.header-newsletter {
+  text-align: right;
+}
+.hn-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  display: block;
+  margin-bottom: 4px;
+}
+.hn-title {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  display: block;
+}
+.hn-issue {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-top: 3px;
+}
+
+/* nav */
+.header-nav {
+  background: rgba(0,0,0,0.15);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+}
+.header-nav a {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  padding: 11px 15px;
+  border-bottom: 2px solid transparent;
+  display: block;
+}
+.header-nav a:hover,
+.header-nav a.on {
+  color: var(--yellow);
+  border-bottom-color: var(--yellow);
+}
+
+/* ═══════════════════════════════ HERO */
+.hero {
+  background: var(--blue);
+  padding: 36px 28px 0;
+}
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(240,234,70,0.12);
+  border: 1px solid rgba(240,234,70,0.3);
+  border-radius: 20px;
+  padding: 5px 14px;
+  margin-bottom: 18px;
+}
+.hero-pill-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+.hero-pill span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.hero-h1 {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  max-width: 490px;
+}
+.hero-h1 em {
+  font-style: normal;
+  color: var(--yellow);
+}
+.hero-body {
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: rgba(255,255,255,0.68);
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  color: #1a3a12;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
+.hero-cta:hover { background: var(--green-80); }
+
+/* hero image shelf */
+.hero-shelf {
+  display: grid;
+  grid-template-columns: 5fr 2fr 2fr;
+  gap: 3px;
+  margin: 0 -28px;
+}
+.shelf-main {
+  height: 230px;
+  background: linear-gradient(150deg, #1a4a7a 0%, #002855 100%);
+  position: relative;
+  overflow: hidden;
+}
+.shelf-main::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url('https://trademarkafrica.com/wp-content/uploads/2026/03/3.-President-Hakainde-Hichilema-at-the-scanner-monitoring-room-at-the-Nakonde-OSBP-768x432.webp') center/cover no-repeat;
+  opacity: 0.45;
+}
+.shelf-main-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,20,50,0.7));
+  padding: 24px 16px 14px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+}
+.shelf-stat {
+  height: 230px;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 1px solid rgba(255,255,255,0.05);
+  padding: 12px;
+}
+.shelf-stat-num {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--yellow);
+  line-height: 1;
+}
+.shelf-stat-lbl {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ═══════════════════════════════ EDITOR NOTE */
+.editor-note {
+  background: var(--yellow-20);
+  border-left: 4px solid var(--yellow);
+  padding: 18px 24px;
+  margin: 0;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.en-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.en-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7a6800;
+  margin-bottom: 5px;
+}
+.en-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4a3c00;
+  font-weight: 400;
+}
+
+/* ═══════════════════════════════ SECTION LABEL */
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.sec-label-line { flex: 1; height: 1px; background: var(--grey-20); }
+.sec-label-text {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--grey);
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════ SECTIONS */
+.sec {
+  padding: 40px 28px;
+}
+.sec.bg-off { background: var(--grey-10); }
+.sec.bg-blue { background: var(--blue-10); }
+.sec.bg-dark { background: var(--blue); }
+
+/* ═══════════════════════════════ LEAD STORY */
+.lead-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.story-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+.tag-blue   { background: var(--blue-20);  color: var(--blue); }
+.tag-green  { background: var(--green-20); color: #2d6622; }
+.tag-red    { background: var(--red-20);   color: #9a1b19; }
+.tag-yellow { background: var(--yellow-20);color: #7a6800; }
+
+.story-h {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.story-p {
+  font-size: 14px;
+  line-height: 1.72;
+  color: var(--ink-mid);
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 2px;
+}
+.read-more:hover { color: var(--red); border-color: var(--red); }
+
+.story-image {
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--blue-20);
+  height: 240px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.story-image-inner {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.img-badge {
+  position: absolute;
+  bottom: 12px; left: 12px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+/* ═══════════════════════════════ DIVIDER */
+.divider { height: 1px; background: var(--grey-20); margin: 0 28px; }
+
+/* ═══════════════════════════════ THREE-GRID */
+.three-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: var(--grey-20);
+  border: 1px solid var(--grey-20);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.grid-card {
+  background: #fff;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.grid-h {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.grid-p {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  flex: 1;
+  font-weight: 400;
+}
+.grid-link {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ═══════════════════════════════ PULL QUOTE */
+.pq-section {
+  background: var(--blue);
+  padding: 44px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.pq-section::before {
+  content: '\201C';
+  position: absolute;
+  top: -30px; left: 24px;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(240,234,70,0.08);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+/* decorative coloured accent bar */
+.pq-accent {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+.pq-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+.pq-body {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.6;
+  color: #fff;
+  max-width: 500px;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+}
+.pq-attr {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  position: relative;
+  z-index: 1;
+}
+.pq-attr span {
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  color: rgba(255,255,255,0.4);
+  margin-left: 5px;
+}
+
+/* ═══════════════════════════════ STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--grey-20);
+  border: 1px solid var(--grey-20);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 28px;
+}
+.stat-cell {
+  background: #fff;
+  padding: 26px 16px 22px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--blue);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.stat-unit { font-size: 16px; color: var(--green); }
+.stat-lbl {
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--grey);
+  font-weight: 400;
+}
+
+/* ═══════════════════════════════ REGIONAL DISPATCHES */
+.region-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 28px;
+}
+.region-card {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--grey-20);
+  display: flex;
+}
+.region-pip { width: 5px; flex-shrink: 0; }
+.pip-blue   { background: var(--blue); }
+.pip-red    { background: var(--red); }
+.pip-green  { background: var(--green); }
+.pip-yellow { background: #c0a800; }
+.region-body { padding: 16px 18px; }
+.region-name {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 6px;
+}
+.region-h {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 7px;
+}
+.region-ctries {
+  font-size: 10px;
+  color: var(--grey);
+  font-weight: 400;
+}
+
+/* ═══════════════════════════════ FEATURE DARK */
+.feature-dark {
+  background: var(--blue);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 280px;
+}
+.fd-visual {
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 24px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+.fd-visual-icon {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: rgba(240,234,70,0.18);
+  line-height: 1;
+}
+.fd-visual-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+}
+.fd-content {
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fd-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 14px;
+}
+.fd-h {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.fd-p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+.fd-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: 1.5px solid var(--yellow);
+  color: var(--yellow);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 3px;
+  align-self: flex-start;
+}
+
+/* ═══════════════════════════════ PODCAST */
+.podcast {
+  background: var(--blue-10);
+  border-top: 3px solid var(--green);
+  padding: 28px 28px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.pod-icon {
+  width: 52px; height: 52px;
+  background: var(--blue);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.pod-icon svg { width: 24px; height: 24px; fill: var(--green); }
+.pod-content { flex: 1; }
+.pod-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 5px;
+}
+.pod-h {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.pod-desc { font-size: 12px; color: var(--grey); line-height: 1.5; }
+.pod-btn {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+  padding: 9px 18px;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════ CTA SECTION */
+.cta-sec {
+  background: var(--grey-10);
+  padding: 44px 28px;
+  text-align: center;
+}
+.cta-eye {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+.cta-h {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+.cta-p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-mid);
+  max-width: 420px;
+  margin: 0 auto 28px;
+  font-weight: 400;
+}
+.cta-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-solid {
+  background: var(--blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.btn-solid:hover { background: var(--blue-80); }
+.btn-ghost {
+  background: transparent;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 11px 26px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.btn-ghost:hover { background: var(--blue-10); }
+
+/* ═══════════════════════════════ FOOTER */
+.footer {
+  background: var(--blue);
+}
+/* four-colour footer bar */
+.footer-bar {
+  display: flex;
+  height: 5px;
+}
+.footer-bar span { flex: 1; display: block; }
+.footer-inner {
+  padding: 40px 28px 28px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 24px;
+}
+.footer-brand-name {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.footer-brand-name span { color: var(--yellow); }
+.footer-tag {
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(255,255,255,0.38);
+  line-height: 1.55;
+  font-family: 'Catamaran', sans-serif;
+  max-width: 180px;
+}
+.footer-col-h {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 14px;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-links a { font-size: 12px; color: rgba(255,255,255,0.55); }
+.footer-links a:hover { color: var(--yellow); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-legal {
+  font-size: 10px;
+  color: rgba(255,255,255,0.25);
+  line-height: 1.7;
+}
+.footer-legal a { color: rgba(255,255,255,0.3); }
+.footer-social { display: flex; gap: 8px; }
+.soc {
+  width: 30px; height: 30px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 800;
+  color: rgba(255,255,255,0.45);
+}
+.soc:hover { border-color: var(--yellow); color: var(--yellow); }
+
+/* ═══════════════════════════════ RESPONSIVE */
+@media (max-width: 580px) {
+  .email-wrap { box-shadow: none; }
+  .topbar { display: none; }
+  .header-row { flex-direction: column; align-items: flex-start; gap: 14px; padding-bottom: 18px; }
+  .header-nav { display: none; }
+  .hero { padding: 24px 20px 0; }
+  .hero-h1 { font-size: 24px; }
+  .hero-shelf { grid-template-columns: 1fr; }
+  .shelf-stat { display: none; }
+  .shelf-main { height: 180px; }
+  .sec { padding: 32px 20px; }
+  .lead-story { grid-template-columns: 1fr; }
+  .story-image { order: -1; height: 200px; }
+  .three-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .region-grid { grid-template-columns: 1fr; }
+  .feature-dark { grid-template-columns: 1fr; }
+  .fd-visual { display: none; }
+  .footer-top { grid-template-columns: 1fr; }
+  .podcast { flex-direction: column; align-items: flex-start; }
+  .cta-btns { flex-direction: column; align-items: center; }
+  .pq-section { padding: 32px 22px; }
+  .pq-body { font-size: 18px; }
+  .divider { margin: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="email-wrap">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-left">May 2026 &nbsp;·&nbsp; Issue No. 14</div>
+  <div class="topbar-right">
+    <a href="https://trademarkafrica.com">Website</a>
+    <a href="https://trademarkafrica.com/impact-stories/">Impact</a>
+    <a href="https://trademarkafrica.com/contact-us/">Contact</a>
+  </div>
+</div>
+
+<!-- FOUR-COLOUR BRAND BAR (top) -->
+<div class="brand-bar">
+  <span class="bb-blue"></span>
+  <span class="bb-green"></span>
+  <span class="bb-red"></span>
+  <span class="bb-yellow"></span>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-row">
+    <div class="header-brand">
+      <div class="hb-org">TradeMark Africa</div>
+      <div class="hb-logo-row">
+        <!-- TMA brand-colour arc mark -->
+        <div class="tma-arc-wrap">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="19" stroke="#003b71" stroke-width="4" stroke-dasharray="30 90" stroke-dashoffset="0"/>
+            <circle cx="22" cy="22" r="19" stroke="#70be5c" stroke-width="4" stroke-dasharray="30 90" stroke-dashoffset="-30"/>
+            <circle cx="22" cy="22" r="19" stroke="#ef4846" stroke-width="4" stroke-dasharray="30 90" stroke-dashoffset="-60"/>
+            <circle cx="22" cy="22" r="19" stroke="#f0ea46" stroke-width="4" stroke-dasharray="30 90" stroke-dashoffset="-90"/>
+          </svg>
+        </div>
+        <div class="hb-wordmark">
+          <div class="hb-trade">TradeMark Africa</div>
+          <div class="hb-tagline">Growing Prosperity Through Trade</div>
+        </div>
+      </div>
+    </div>
+    <div class="header-newsletter">
+      <span class="hn-label">Monthly Newsletter</span>
+      <span class="hn-title">The Scoop</span>
+      <span class="hn-issue">Issue 14 · May 2026</span>
+    </div>
+  </div>
+  <div class="header-nav">
+    <a href="#" class="on">Trade News</a>
+    <a href="#">Policy</a>
+    <a href="#">Impact</a>
+    <a href="#">Regions</a>
+    <a href="#">Events</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-pill">
+    <div class="hero-pill-dot"></div>
+    <span>Lead Story — May 2026</span>
+  </div>
+  <h1 class="hero-h1">Zambia's Nakonde OSBP Marks a <em>New Chapter</em> for Regional Trade</h1>
+  <p class="hero-body">President Hakainde Hichilema commissioned the modernised Nakonde One Stop Border Post, powered by advanced scanning infrastructure — cutting clearance times and setting a bold new standard for East-Southern Africa connectivity.</p>
+  <a href="https://trademarkafrica.com" class="hero-cta">Read Full Story &nbsp;→</a>
+
+  <div class="hero-shelf">
+    <div class="shelf-main">
+      <div class="shelf-main-label">Nakonde OSBP Scanner Room, Zambia — 2026</div>
+    </div>
+    <div class="shelf-stat">
+      <div class="shelf-stat-num">$4.2<span style="font-size:14px">B</span></div>
+      <div class="shelf-stat-lbl">Trade Value Facilitated 2024/25</div>
+    </div>
+    <div class="shelf-stat">
+      <div class="shelf-stat-num">17</div>
+      <div class="shelf-stat-lbl">Countries of Operation</div>
+    </div>
+  </div>
+</div>
+
+<!-- EDITOR NOTE -->
+<div class="editor-note">
+  <div class="en-icon">✏️</div>
+  <div>
+    <div class="en-label">Editor's Note</div>
+    <p class="en-text">This month's Scoop covers landmark border post launches, digital trade milestones, AfCFTA implementation updates, and stories of traders whose lives are changing because of your collective work across the continent.</p>
+  </div>
+</div>
+
+<!-- SECONDARY STORIES -->
+<div class="sec" style="padding-top:36px;">
+  <div class="sec-label">
+    <div class="sec-label-line"></div>
+    <div class="sec-label-text">This Month's Stories</div>
+    <div class="sec-label-line"></div>
+  </div>
+
+  <div class="lead-story">
+    <div>
+      <span class="story-tag tag-blue">Digital Trade</span>
+      <h2 class="story-h">Kenya's Single Window Goes Live Across All Port Gateways</h2>
+      <p class="story-p">TradeMark Africa's long-term investment in Kenya's National Electronic Single Window System reached a watershed moment in April 2026, with full deployment at all major entry points — reducing average clearance times by 36 per cent.</p>
+      <a href="https://trademarkafrica.com/digital-trade-system/" class="read-more">Read More →</a>
+    </div>
+    <div class="story-image">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--blue-20),var(--blue-40));display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;opacity:0.5;">
+          <div style="font-size:42px;">🖥</div>
+          <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-top:8px;color:var(--blue)">Kenya Ports</div>
+        </div>
+      </div>
+      <div class="img-badge">Kenya · Digital</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- THREE-STORY GRID -->
+<div class="sec" style="padding-top:24px;">
+  <div class="three-grid">
+    <div class="grid-card">
+      <span class="story-tag tag-blue" style="align-self:flex-start">AfCFTA · Policy</span>
+      <div class="grid-h">Continental Trade Protocol Negotiations Enter Final Phase</div>
+      <p class="grid-p">AU Member States converged in Addis Ababa to advance the Investment Protocol ratification — a pivotal milestone for Africa's $3.4 trillion internal trade potential.</p>
+      <a href="https://trademarkafrica.com/trade-investment-environment/" class="grid-link">Explore →</a>
+    </div>
+    <div class="grid-card">
+      <span class="story-tag tag-red" style="align-self:flex-start">Women in Trade</span>
+      <div class="grid-h">Berbera Women's Fish Market Transforms Coastal Livelihoods</div>
+      <p class="grid-p">In Somaliland, TMA's Women in Fisheries programme has enabled over 340 women to formalise their trade, access credit, and double household incomes.</p>
+      <a href="https://trademarkafrica.com/womenintrade/" class="grid-link">Read Story →</a>
+    </div>
+    <div class="grid-card">
+      <span class="story-tag tag-green" style="align-self:flex-start">Green Trade</span>
+      <div class="grid-h">East Africa's Corridor Carbon Measurement Framework Launches</div>
+      <p class="grid-p">A first-of-its-kind tool to quantify carbon emissions along key trade corridors, enabling governments and logistics firms to meet climate commitments.</p>
+      <a href="https://trademarkafrica.com/greening-trade/" class="grid-link">Learn More →</a>
+    </div>
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pq-section">
+  <div class="pq-accent">
+    <div class="pq-dot" style="background:var(--green)"></div>
+    <div class="pq-dot" style="background:var(--yellow)"></div>
+    <div class="pq-dot" style="background:var(--red)"></div>
+    <div class="pq-dot" style="background:rgba(255,255,255,0.2)"></div>
+  </div>
+  <p class="pq-body">"Regional integration is not a political aspiration — it is an economic imperative. Every hour shaved off border clearance is a meal on the table, a business growing, a family thriving."</p>
+  <div class="pq-attr">Cathy Morrow Roberson <span>— Executive Director, TradeMark Africa</span></div>
+</div>
+
+<!-- STATS -->
+<div class="sec bg-off">
+  <div class="sec-label">
+    <div class="sec-label-line"></div>
+    <div class="sec-label-text">Impact at a Glance · 2024/25</div>
+    <div class="sec-label-line"></div>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-cell">
+      <div class="stat-num">36<span class="stat-unit">%</span></div>
+      <div class="stat-lbl">Average reduction in border clearance time</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">1.2<span class="stat-unit">M</span></div>
+      <div class="stat-lbl">Traders directly supported across the continent</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">58</div>
+      <div class="stat-lbl">Policy & legislative reforms facilitated in 2025</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">$240<span class="stat-unit">M</span></div>
+      <div class="stat-lbl">New trade finance mobilised for SMEs</div>
+    </div>
+  </div>
+</div>
+
+<!-- REGIONAL DISPATCHES -->
+<div class="sec">
+  <div class="sec-label">
+    <div class="sec-label-line"></div>
+    <div class="sec-label-text">Regional Dispatches</div>
+    <div class="sec-label-line"></div>
+  </div>
+  <div class="region-grid">
+    <div class="region-card">
+      <div class="region-pip pip-blue"></div>
+      <div class="region-body">
+        <div class="region-name">East Africa</div>
+        <div class="region-h">Northern Corridor Efficiency Up 28% After Joint TMA-EAC Reforms</div>
+        <div class="region-ctries">Kenya · Uganda · Rwanda · Tanzania · Burundi</div>
+      </div>
+    </div>
+    <div class="region-card">
+      <div class="region-pip pip-red"></div>
+      <div class="region-body">
+        <div class="region-name">Horn of Africa</div>
+        <div class="region-h">Djibouti Port Expansion Unlocks New Inland Access Routes</div>
+        <div class="region-ctries">Ethiopia · Djibouti · Somaliland</div>
+      </div>
+    </div>
+    <div class="region-card">
+      <div class="region-pip pip-green"></div>
+      <div class="region-body">
+        <div class="region-name">Southern Africa</div>
+        <div class="region-h">Zambia–Malawi Rail Link Enters Feasibility Phase Under SADC Plan</div>
+        <div class="region-ctries">Zambia · Malawi · Mozambique</div>
+      </div>
+    </div>
+    <div class="region-card">
+      <div class="region-pip pip-yellow"></div>
+      <div class="region-body">
+        <div class="region-name">West Africa</div>
+        <div class="region-h">Ghana &amp; Côte d'Ivoire Launch Joint NTB Resolution Mechanism</div>
+        <div class="region-ctries">Ghana · Côte d'Ivoire</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE DARK -->
+<div class="feature-dark">
+  <div class="fd-visual">
+    <div class="fd-visual-icon">2024</div>
+    <div class="fd-visual-label">Annual Trade<br>Facilitation Report</div>
+  </div>
+  <div class="fd-content">
+    <div class="fd-tag">📄 &nbsp;Featured Publication</div>
+    <h2 class="fd-h">Trade Facilitation Report 2024: Measuring What Matters</h2>
+    <p class="fd-p">Our comprehensive annual report examines border efficiency gains, policy reform milestones, and the human stories behind the numbers across 17 countries of operation.</p>
+    <a href="https://trademarkafrica.com/wp-content/uploads/2025/11/94070_trade_facilitation_report_b5-v1.13-3.pdf" class="fd-cta">Download Report →</a>
+  </div>
+</div>
+
+<!-- PODCAST -->
+<div class="podcast">
+  <div class="pod-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3zm-1 3a1 1 0 012 0v8a1 1 0 01-2 0V4zm8 7a1 1 0 00-2 0 5 5 0 01-10 0 1 1 0 00-2 0 7 7 0 006 6.93V20H9a1 1 0 000 2h6a1 1 0 000-2h-2v-2.07A7 7 0 0019 11z"/>
+    </svg>
+  </div>
+  <div class="pod-content">
+    <div class="pod-label">🎙 Keep Africa Trading — Podcast</div>
+    <div class="pod-h">Episode 42: The AfCFTA Implementation Gap — What's Working, What Isn't</div>
+    <div class="pod-desc">Unpacking the distance between continental trade ambition and ground-level reality with our panel of policy experts.</div>
+  </div>
+  <a href="https://trademarkafrica.com/podcasts/" class="pod-btn">Listen Now</a>
+</div>
+
+<!-- CTA -->
+<div class="cta-sec">
+  <div class="cta-eye">Get Involved</div>
+  <h2 class="cta-h">Africa's Trade Transformation Needs Every Voice</h2>
+  <p class="cta-p">Whether you are a policymaker, investor, researcher or practitioner — TradeMark Africa's network, research and events are designed to help you drive meaningful change.</p>
+  <div class="cta-btns">
+    <a href="https://trademarkafrica.com/impact-stories/" class="btn-solid">Explore Impact Stories</a>
+    <a href="https://trademarkafrica.com/publications-3/" class="btn-ghost">View All Publications</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-bar">
+    <span style="background:var(--blue-80)"></span>
+    <span style="background:var(--green)"></span>
+    <span style="background:var(--red)"></span>
+    <span style="background:var(--yellow)"></span>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Trade<span>Mark</span> Africa</div>
+        <div class="footer-tag">Growing Prosperity Through Trade</div>
+      </div>
+      <div>
+        <div class="footer-col-h">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="https://trademarkafrica.com/about-us/">About Us</a></li>
+          <li><a href="https://trademarkafrica.com/tma-impact/">Our Impact</a></li>
+          <li><a href="https://trademarkafrica.com/publications-3/">Publications</a></li>
+          <li><a href="https://trademarkafrica.com/annual-reports/">Annual Reports</a></li>
+          <li><a href="https://trademarkafrica.com/newsletter/">Newsletter Archive</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Contact</div>
+        <ul class="footer-links">
+          <li><a href="https://trademarkafrica.com/contact-us/">Get In Touch</a></li>
+          <li><a href="https://trademarkafrica.com/work-with-us/">Careers</a></li>
+          <li><a href="https://trademarkafrica.com/procurement/">Procurement</a></li>
+          <li><a href="https://trademarkafrica.com/donors/">Funding Partners</a></li>
+          <li><a href="https://trademarkafrica.com/whistleblowing/">Whistleblowing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        © 2026 TradeMark Africa. All rights reserved.<br>
+        Fidelity Insurance Centre, Off Waiyaki Way, Westlands, Nairobi, Kenya.<br>
+        <a href="#">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://trademarkafrica.com">View in Browser</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://twitter.com/TradeMarkA" class="soc">𝕏</a>
+        <a href="https://www.facebook.com/TradeMarkAfrica" class="soc">f</a>
+        <a href="https://www.linkedin.com/company/trademarkafrica" class="soc">in</a>
+        <a href="https://www.youtube.com/@TradeMarkAfrica" class="soc">▶</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /email-wrap -->
+</body>
+</html>
